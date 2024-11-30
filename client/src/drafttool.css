@@ -1,0 +1,79 @@
+.draft-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+  }
+  
+  .team {
+    width: 250px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .blue-team {
+    border: 2px solid #0bc4e2;
+  }
+  
+  .red-team {
+    border: 2px solid #e23d3d;
+  }
+  
+  .champion-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 0 20px;
+    margin: 0 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+  
+  .champion-card {
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .champion-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .champion-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .champion-name {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    color: white;
+  }
+  
+  .ban-list, .pick-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .champion-icon {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: grayscale(100%);
+  }
+  
+  .banned-champion .champion-icon {
+    opacity: 0.5;
+  }
